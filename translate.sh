@@ -1,0 +1,1 @@
+python translate.py -model models/gy2_acc_91.91_ppl_1.52_e30.pt -src data/gy2/test.en -tgt ~/ml/bleu/Ref_Dataset_zh-chs.txt.split -report_bleu -output pred.txt -replace_unk -verbose -gpu 0 -batch_size 256

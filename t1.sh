@@ -1,0 +1,1 @@
+python train.py -gpuid 0 -layers 6 -rnn_size 512 -word_vec_size 512 -epochs 30 -max_grad_norm 0 -optim adam -encoder_type transformer -decoder_type transformer -position_encoding -dropout 0.1 -param_init 0 -warmup_steps 12000 -learning_rate 0.2 -decay_method noam -label_smoothing 0.1 -adam_beta2 0.98 -batch_size 4 -start_decay_at 31 -data data/demo -save_model demo-model

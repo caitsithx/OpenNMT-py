@@ -149,7 +149,9 @@ class Trainer(object):
         for i, batch in enumerate(train_iter):
             cur_dataset = train_iter.get_cur_dataset()
             self.train_loss.cur_dataset = cur_dataset
-
+            #chicm
+            print(type(batch))
+            print("batch", batch.size())
             true_batchs.append(batch)
             accum += 1
             if self.norm_method == "tokens":
@@ -286,6 +288,9 @@ class Trainer(object):
                 # 2. F-prop all but generator.
                 if self.grad_accum_count == 1:
                     self.model.zero_grad()
+                #chicm
+                print(src.size(), tgt.size(), src_lengths.size(), type(src), type(tgt), type(src_lengths))
+                print(src_lengths)
                 outputs, attns, dec_state = \
                     self.model(src, tgt, src_lengths, dec_state)
 

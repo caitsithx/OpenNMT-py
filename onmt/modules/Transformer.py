@@ -279,6 +279,7 @@ class TransformerDecoder(nn.Module):
         tgt_batch, tgt_len = tgt_words.size()
         aeq(input_batch, contxt_batch, src_batch, tgt_batch)
         aeq(contxt_len, src_len)
+        print(contxt_len, src_len)
         # aeq(input_len, tgt_len)
         # END CHECKS
 
